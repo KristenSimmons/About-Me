@@ -12,7 +12,7 @@ Meet Kristen! This project is all about letting the user get to know me!
 
 ### Lighthouse Accessibility Report Score
 
-<img title="Accessibility Report" alt="screenshot" src="  ">
+<img title="Accessibility Report" alt="screenshot" src="img/Screenshot.png">
 
 ### Reflections and Comments
 
