@@ -1,5 +1,7 @@
 'use strict'
 
+let correctCount = 0;
+
 function getName(){
   //declaring a constant variable called usersName, assigning it the value of what the prompt returns (the users input)
   const usersName = prompt("Hello!! What is your name?");
@@ -28,6 +30,7 @@ let lowercaseResponse = metResponse.toLowerCase();{
     alert("That's too bad!");
   } else if (lowercaseResponse == 'yes'){
     alert("That's awesome!");
+    correctCount += 1;
   }
 }
 console.log(metResponse);
@@ -38,6 +41,7 @@ let lowercaseColor = faveColor.toLowerCase();{
     alert("Aww..you guessed wrong! Pink is my favorite color!");
   } else if (lowercaseColor == 'yes'){
     alert("That's right! Good job!");
+    correctCount += 1;
   }
 }
 console.log(faveColor);
@@ -48,6 +52,7 @@ let lowercaseTown = homeTown.toLowerCase();{
     alert("Darn, that is not correct!");
   } else if (lowercaseTown == 'yes'){
     alert("Nice! You got it right!");
+    correctCount += 1;
   }
 }
 console.log(homeTown);
@@ -58,6 +63,7 @@ let lowercaseKids = fourKids.toLowerCase();{
     alert("Incorrect! I have 2 boys, 2 girls!");
   } else if (lowercaseKids == 'yes'){
     alert("Correctamundo! You know me so well!");
+    correctCount += 1;
   }
 }
 console.log(fourKids);
@@ -66,6 +72,7 @@ const collegeGrad = prompt('Did I graduate from OU?')
 let lowercaseGrad = collegeGrad.toLowerCase();{
   if (lowercaseGrad == 'no'){
     alert("You got it right! Yay!");
+    correctCount += 1;
   } else if (lowercaseKids == 'yes'){
     alert("I wish you were right! But i didn't!");
   }
@@ -83,6 +90,7 @@ for (let attempts = 4; attempts > 0; attempts--) {
     alert('Too low! Please try again');
   } else if (replyNumber === myNumber) {  
     alert('You are right!! 32 is my favorite number!');
+    correctCount += 1;
     break; 
   }
 
@@ -96,12 +104,16 @@ let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
 
 for (let attempts = 6; attempts > 0; attempts--) {
   let guessVaca = prompt('Where am I going on vacation in February?');
-    let lowerVaca = guessVaca.toLowerCase();
-  if (lowerVaca !== nextVaca) {
-    alert('Good guess, but no! Try again!');
-    } else if (lowerVaca === nextVaca) {  
+  let lowerVaca = guessVaca.toLowerCase();
+  for (let i = 0; i < nextVaca.length; i += 1) {
+    if (lowerVaca !== nextVaca[i]) {
+      alert('Sorry, guess again!');
+    } else if (lowerVaca === nextVaca[i]) {
     alert('You are right!! And I cannot wait!');
-    break; 
+    correctCount += 1;
+    lowerVaca = 0;
+    break;
+  }
   }
 
   if (attempts === 1){
@@ -109,7 +121,4 @@ for (let attempts = 6; attempts > 0; attempts--) {
   }
 }
 
-alert(`Thanks for taking my quiz, ${usersName}!`);
-
-
-
+alert(`Thanks for taking my quiz, ${usersName}! You got ${correctCount} out of 7 correct!`);
