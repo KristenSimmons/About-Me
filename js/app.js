@@ -62,7 +62,7 @@ let lowercaseKids = fourKids.toLowerCase();{
 }
 console.log(fourKids);
 
-const collegeGrad = prompt('Did I graduate college?')
+const collegeGrad = prompt('Did I graduate from OU?')
 let lowercaseGrad = collegeGrad.toLowerCase();{
   if (lowercaseGrad == 'no'){
     alert("You got it right! Yay!");
@@ -72,4 +72,26 @@ let lowercaseGrad = collegeGrad.toLowerCase();{
 }
 console.log(collegeGrad);
 
+let myNumber = 32;
+
+for (let attempts = 4; attempts > 0; attempts--) {
+  let faveNumber = prompt('What is my favorite number? 1-50');
+  let replyNumber = parseInt(faveNumber);
+  if (replyNumber > myNumber) {
+    alert('Too high! Please try again');
+  } else if (replyNumber < myNumber) {
+    alert('Too low! Please try again');
+  } else if (replyNumber === myNumber) {  
+    alert('You are right!! 32 is my favorite number!');
+    break; 
+  }
+
+  if (attempts === 1){
+    alert('You are out of guesses, my fave number is 32!');
+  }
+}
+
 alert(`Thanks for taking my quiz, ${usersName}!`);
+
+
+
