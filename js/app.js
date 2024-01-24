@@ -26,7 +26,7 @@ const metResponse = prompt('Have we ever met in person?');
 let lowercaseResponse = metResponse.toLowerCase();{
   if (lowercaseResponse == 'no'){
     alert("That's too bad!");
-  } else if (lowercaseResponseResponse == 'yes'){
+  } else if (lowercaseResponse == 'yes'){
     alert("That's awesome!");
   }
 }
@@ -88,6 +88,24 @@ for (let attempts = 4; attempts > 0; attempts--) {
 
   if (attempts === 1){
     alert('You are out of guesses, my fave number is 32!');
+  }
+}
+
+// new 
+let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
+
+for (let attempts = 6; attempts > 0; attempts--) {
+  let guessVaca = prompt('Where am I going on vacation in February?');
+    let lowerVaca = guessVaca.toLowerCase();
+  if (lowerVaca !== nextVaca) {
+    alert('Good guess, but no! Try again!');
+    } else if (lowerVaca === nextVaca) {  
+    alert('You are right!! And I cannot wait!');
+    break; 
+  }
+
+  if (attempts === 1){
+    alert('You are out of guesses! Acceptable answers would have been: Pagosa Springs, Colorado, ski trip, or the mountains!');
   }
 }
 
