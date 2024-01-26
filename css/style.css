@@ -5,12 +5,14 @@ p.round3 {
 }
 
 body{
-  color: pink;
+  background-color: black;
   padding: 5%;
 }
 
 h1{
   text-align: center;
+  border: deeppink;
+  border-width: thick ;
   display: block;
   font-size: 4em;
   margin-block-start: 0.67em;
