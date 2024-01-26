@@ -5,7 +5,7 @@ p.round3 {
 }
 
 body{
-  background-color: black;
+  background-color: aqua;
   padding: 5%;
 }
 
@@ -28,7 +28,6 @@ main{
 }
 
 section{
-  color: aqua;
   border: color(srgb red green rgb(224, 251, 74));
   border-width: 3px;
   border-style: solid;
