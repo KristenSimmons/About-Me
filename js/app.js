@@ -20,105 +20,128 @@ function getName(){
 let usersName = getName();
 console.log(usersName);
 
+
 alert(`Welcome, ${usersName}! Hit OK for a fun quiz!`);
 
 alert('I am going to ask a series of Yes or No questions.. hit OK when you are ready!');
 
-const metResponse = prompt('Have we ever met in person?');
-let lowercaseResponse = metResponse.toLowerCase();{
-  if (lowercaseResponse == 'no'){
-    alert("That's too bad!");
-  } else if (lowercaseResponse == 'yes'){
-    alert("That's awesome!");
-    correctCount += 1;
+function getResponse(){
+  //declaring a function to get a response from the user
+  const metResponse = prompt('Have we ever met in person, yes or no?');
+  let lowercaseResponse = metResponse.toLowerCase();{
+    if (lowercaseResponse == 'no'){
+      alert("That's too bad!");
+    } else if (lowercaseResponse == 'yes'){
+      alert("That's awesome!");
+      correctCount += 1;
+    }
   }
 }
+let metResponse = getResponse();
 console.log(metResponse);
 
-const faveColor = prompt('Is pink my favorite color?')
-let lowercaseColor = faveColor.toLowerCase();{
-  if (lowercaseColor == 'no'){
-    alert("Aww..you guessed wrong! Pink is my favorite color!");
-  } else if (lowercaseColor == 'yes'){
-    alert("That's right! Good job!");
-    correctCount += 1;
+function colorAnswer(){
+  // running function to ask user about my favorite color
+  const faveColor = prompt('Is pink my favorite color?')
+  let lowercaseColor = faveColor.toLowerCase();{
+    if (lowercaseColor == 'no'){
+      alert("Aww..you guessed wrong! Pink is my favorite color!");
+    } else if (lowercaseColor == 'yes'){
+      alert("That's right! Good job!");
+      correctCount += 1;
+    }
   }
 }
+let faveColor = colorAnswer();
 console.log(faveColor);
 
-const homeTown = prompt('Am I from Moore, OK?')
-let lowercaseTown = homeTown.toLowerCase();{
-  if (lowercaseTown == 'no'){
-    alert("Darn, that is not correct!");
-  } else if (lowercaseTown == 'yes'){
-    alert("Nice! You got it right!");
-    correctCount += 1;
+function getTown(){
+  const homeTown = prompt('Am I from Moore, OK?')
+  let lowercaseTown = homeTown.toLowerCase();{
+    if (lowercaseTown == 'no'){
+      alert("Darn, that is not correct!");
+    } else if (lowercaseTown == 'yes'){
+      alert("Nice! You got it right!");
+      correctCount += 1;
+    }
   }
 }
+let homeTown = getTown();
 console.log(homeTown);
 
-const fourKids = prompt('Do I have 4 kids?')
-let lowercaseKids = fourKids.toLowerCase();{
-  if (lowercaseKids == 'no'){
-    alert("Incorrect! I have 2 boys, 2 girls!");
-  } else if (lowercaseKids == 'yes'){
-    alert("Correctamundo! You know me so well!");
-    correctCount += 1;
+function myKids(){
+  const fourKids = prompt('Do I have 4 kids?')
+  let lowercaseKids = fourKids.toLowerCase();{
+    if (lowercaseKids == 'no'){
+      alert("Incorrect! I have 2 boys, 2 girls!");
+    } else if (lowercaseKids == 'yes'){
+      alert("Correctamundo! You know me so well!");
+      correctCount += 1;
+    }
   }
 }
+let fourKids = myKids();
 console.log(fourKids);
 
-const collegeGrad = prompt('Did I graduate from OU?')
-let lowercaseGrad = collegeGrad.toLowerCase();{
-  if (lowercaseGrad == 'no'){
-    alert("You got it right! Yay!");
-    correctCount += 1;
-  } else if (lowercaseKids == 'yes'){
-    alert("I wish you were right! But i didn't!");
+function myGrad(){
+  const collegeGrad = prompt('Did I graduate from OU?')
+  let lowercaseGrad = collegeGrad.toLowerCase();{
+    if (lowercaseGrad == 'no'){
+      alert("You got it right! Yay!");
+      correctCount += 1;
+    } else if (lowercaseKids == 'yes'){
+      alert("I wish you were right! But i didn't!");
+    }
   }
 }
+let collegeGrad = myGrad();
 console.log(collegeGrad);
 
 let myNumber = 32;
 
-for (let attempts = 4; attempts > 0; attempts--) {
-  let faveNumber = prompt('What is my favorite number? 1-50');
-  let replyNumber = parseInt(faveNumber);
-  if (replyNumber > myNumber) {
-    alert('Too high! Please try again');
-  } else if (replyNumber < myNumber) {
-    alert('Too low! Please try again');
-  } else if (replyNumber === myNumber) {  
-    alert('You are right!! 32 is my favorite number!');
-    correctCount += 1;
-    break; 
-  }
-
-  if (attempts === 1){
-    alert('You are out of guesses, my fave number is 32!');
-  }
-}
-
-// new 
-let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
-
-for (let attempts = 6; attempts > 0; attempts--) {
-  let guessVaca = prompt('Where am I going on vacation in February?');
-  let lowerVaca = guessVaca.toLowerCase();
-  for (let i = 0; i < nextVaca.length; i += 1) {
-    if (lowerVaca !== nextVaca[i]) {
-      alert('Sorry, guess again!');
-    } else if (lowerVaca === nextVaca[i]) {
-    alert('You are right!! And I cannot wait!');
-    correctCount += 1;
-    lowerVaca = 0;
-    break;
-  }
-  }
-
-  if (attempts === 1){
-    alert('You are out of guesses! Acceptable answers would have been: Pagosa Springs, Colorado, ski trip, or the mountains!');
+function findNumber(){
+  for (let attempts = 4; attempts > 0; attempts--) {
+    let faveNumber = prompt('What is my favorite number? 1-50');
+    let replyNumber = parseInt(faveNumber);
+    if (replyNumber > myNumber) {
+      alert('Too high! Please try again');
+    } else if (replyNumber < myNumber) {
+      alert('Too low! Please try again');
+    } else if (replyNumber === myNumber) {
+      alert('You are right!! 32 is my favorite number!');
+      correctCount += 1;
+      break;
+    }
+    if (attempts === 1){
+      alert('You are out of guesses, my fave number is 32!');
+    }
   }
 }
+let replyNumber = findNumber();
+console.log(replyNumber);
+
+
+function getVaca(){
+  let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
+  for (let attempts = 6; attempts > 0; attempts--) {
+    let guessVaca = prompt('Where am I going on vacation in February?');
+    let lowerVaca = guessVaca.toLowerCase();
+    for (let i = 0; i < nextVaca.length; i += 1) {
+      if (lowerVaca !== nextVaca[i]) {
+        alert('Sorry, guess again!');
+      } else if (lowerVaca === nextVaca[i]) {
+        alert('You are right!! And I cannot wait!');
+        correctCount += 1;
+        break;
+      }
+    }
+    if (attempts === 1){
+      alert('You are out of guesses! Acceptable answers would have been: Pagosa Springs, Colorado, ski trip, or the mountains!');
+    }
+  }
+}
+let nextVaca = getVaca();
+console.log(getVaca);
+
 
 alert(`Thanks for taking my quiz, ${usersName}! You got ${correctCount} out of 7 correct!`);
