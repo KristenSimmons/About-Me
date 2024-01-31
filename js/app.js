@@ -122,3 +122,36 @@ for (let attempts = 6; attempts > 0; attempts--) {
 }
 
 alert(`Thanks for taking my quiz, ${usersName}! You got ${correctCount} out of 7 correct!`);
+
+
+
+function getVaca() {
+  let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
+  let correctCount = 0; // Initialize correctCount variable
+
+  for (let attempts = 6; attempts > 0; attempts--) {
+    let guessVaca = prompt('Where am I going on vacation in February?');
+    let lowerVaca = guessVaca.toLowerCase();
+    let isCorrect = false; // Flag to check if the guess is correct
+
+    for (let i = 0; i < nextVaca.length; i += 1) {
+      if (lowerVaca === nextVaca[i]) {
+        alert('You are right!! And I cannot wait!');
+        correctCount += 1;
+        isCorrect = true; // Set the flag to true when the guess is correct
+        break;
+      }
+    }
+
+    if (isCorrect) {
+      // If the guess is correct, exit the loop
+      break;
+    } else {
+      alert('Sorry, guess again!');
+    }
+
+    if (attempts === 1) {
+      alert('You are out of guesses! Acceptable answers would have been: Pagosa Springs, Colorado, ski trip, or the mountains!');
+    }
+  }
+}
