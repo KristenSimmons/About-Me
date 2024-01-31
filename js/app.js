@@ -121,36 +121,8 @@ let replyNumber = findNumber();
 console.log(replyNumber);
 
 
-function getVaca(){
-  let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
-  for (let attempts = 6; attempts > 0; attempts--) {
-    let guessVaca = prompt('Where am I going on vacation in February?');
-    let lowerVaca = guessVaca.toLowerCase();
-    for (let i = 0; i < nextVaca.length; i += 1) {
-      if (lowerVaca !== nextVaca[i]) {
-        alert('Sorry, guess again!');
-      } else if (lowerVaca === nextVaca[i]) {
-        alert('You are right!! And I cannot wait!');
-        correctCount += 1;
-        break;
-      }
-    }
-    if (attempts === 1){
-      alert('You are out of guesses! Acceptable answers would have been: Pagosa Springs, Colorado, ski trip, or the mountains!');
-    }
-  }
-}
-let nextVaca = getVaca();
-console.log(getVaca);
-
-
-alert(`Thanks for taking my quiz, ${usersName}! You got ${correctCount} out of 7 correct!`);
-
-
-
 function getVaca() {
   let nextVaca = ["colorado", "co", "ski trip", "mountains", "pagosa springs"];
-  let correctCount = 0; // Initialize correctCount variable
 
   for (let attempts = 6; attempts > 0; attempts--) {
     let guessVaca = prompt('Where am I going on vacation in February?');
@@ -178,3 +150,7 @@ function getVaca() {
     }
   }
 }
+let nextVaca = getVaca();
+console.log(getVaca);
+
+alert(`Thanks for taking my quiz, ${usersName}! You got ${correctCount} out of 7 correct!`);
